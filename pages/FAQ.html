@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>pro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <!-- Dropdown Menu -->
+                <div class="dropdown">
+                    <button class="dropbtn">Menu</button>
+                    <div class="dropdown-content">
+                        <a href="./index.html">Home</a>
+                        <a href="pages/.html">About Us</a>
+            
+                        <!-- Submenu -->
+                        <div class="submenu">
+                            <a href="#">Services</a>
+                            <div class="submenu-content">
+                                <a href="#">Web Development</a>
+                                <a href="#">App Development</a>
+                                <a href="#">SEO</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="search-container">
+            <input type="text" class="search-bar" id="custom-search-input" placeholder="Search...">
+            <button class="search-btn" onclick="triggerGoogleSearch()">Search</button>
+        </div>
+        <script>
+            function triggerGoogleSearch() {
+                const query = document.getElementById("custom-search-input").value;
+                const gcseElement = document.querySelector(".gcse-search");
+                const iframe = gcseElement.querySelector("iframe");
+                
+                if (iframe) {
+                    // Update the iframe URL with the search query
+                    iframe.contentWindow.postMessage({ query }, "*");
+                } else {
+                    // Fallback: open Google CSE in a new tab
+                    window.open(`https://cse.google.com/cse?cx=b2adc6d36712f4935&q=${encodeURIComponent(query)}`, "_blank");
+                }
+            }
+        </script>
+        <script async src="https://cse.google.com/cse.js?cx=b2adc6d36712f4935"></script>
+        <div class="gcse-search" style="display: none;"></div>
+        <button class="Signup">Sign Up</button>
+        <button class="signin">Sign In</button>
+        <button class="mode-toggle">🌙</button>
+    </header>
+    <div class="faq-container">
+        <h1>Game Downloads FAQ</h1>
+        <div class="faq-item">
+            <div class="faq-question">1. How do I download a game?</div>
+            <div class="faq-answer">Click on the "Download" button on the game's page. The download will start automatically.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">2. Are the games free to download?</div>
+            <div class="faq-answer">Most games are free to download, but some may require a purchase or subscription.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">3. What platforms are supported?</div>
+            <div class="faq-answer">Our games are available for Windows, macOS, and some are compatible with Linux. Mobile versions are also available for iOS and Android.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">4. How can I report a bug in a game?</div>
+            <div class="faq-answer">You can report bugs by visiting our support page and filling out the bug report form.</div>
+        </div>
+    <script>
+        const questions = document.querySelectorAll('.faq-question');
+
+        questions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isOpen = answer.style.display === 'block';
+
+                document.querySelectorAll('.faq-answer').forEach(item => item.style.display = 'none');
+
+                if (!isOpen) {
+                    answer.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

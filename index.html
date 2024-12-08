@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Games</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <!-- Dropdown Menu -->
+                <div class="dropdown">
+                    <button class="dropbtn">Menu</button>
+                    <div class="dropdown-content">
+                        <a href="./index.html">Home</a>
+                        <a href="pages/.html">About Us</a>
+            
+                        <!-- Submenu -->
+                        <div class="submenu">
+                            <a href="#">Services</a>
+                            <div class="submenu-content">
+                                <a href="#">Web Development</a>
+                                <a href="#">App Development</a>
+                                <a href="#">SEO</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="search-container">
+            <input type="text" class="search-bar" id="searchBar" placeholder="Search for a game...">
+            <button class="search-btn" onclick="searchGames()">Search</button>
+        </div>
+        <button class="Signup">Sign Up</button>
+        <button class="signin">Sign In</button>
+        <button class="mode-toggle">🌙</button>
+    </header>
+    <main>
+        <h1>Featured</h1>
+        <section>
+        <article id="game1">
+            <img src="https://images.hdqwalls.com/download/fortnite-2018-game-71-3840x2400.jpg" alt="Game 1">
+            <p>Fortnite: Open world.</p>
+        </article>
+
+        <!-- Game 2 -->
+        <article id="game2">
+            <img src="https://gamingbolt.com/wp-content/uploads/2024/05/call-of-duty-black-ops-6-1.jpg" alt="Game 2">
+            <p>COD Black OPS III: First-person shooter.</p>
+        </article>
+
+        <!-- Game 3 -->
+        <article id="game3">
+            <img src="https://help.generationesports.com/hc/article_attachments/360095197572" alt="Game 3">
+            <p>Rocket Leauge: Racing.</p>
+        </article>
+
+        <!-- Game 4 -->
+        <article id="game4">
+            <img src="https://get.wallhere.com/photo/Valorant-1833661.jpg" alt="Game 4">
+            <p>Valorant: First-person shooter.</p>
+        </article>
+
+        <!-- Game 5 -->
+        <article id="game5">
+            <img src="https://www.gtavice.net/content/images/gta6-logo.png" alt="Game 5">
+            <p>GTA VI: Open world.</p>
+        </article>
+    </section>
+    <section>
+        <main>
+            <div class="mailing-list">
+                <h2>Join Our Mailing List</h2>
+                <p>Stay updated with our latest news and offers.</p>
+                <form id="mailing-form" action="your-backend-url" method="POST">
+                    <input type="email" name="email" placeholder="Enter your email" required class="mailing-input">
+                    <button type="submit" class="mailing-btn">Subscribe</button>
+                </form>
+            </div>
+        </main>
+    
+        <script>
+            // JavaScript to show a thank you message on form submission
+            document.getElementById('mailing-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevents the form from submitting the traditional way
+                alert('Thank you for joining our mailing list!');
+                // You can also submit the form using JavaScript if needed
+                // this.submit(); // Uncomment this line if you want to submit the form after showing the message
+            });
+        </script>
+    </section>
+    <footer>
+        <p>Project Media P2 © 2024</p>
+        <p>© 2024 Hernan Inc. All Rights Reserved.</p>
+    </footer>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>
