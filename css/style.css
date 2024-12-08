@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(
+        90deg, 
+        #220d0c, 
+        #000000 25%, 
+        #531000 50%, 
+        #000000 75%, 
+        #8b2902 100%
+    );
+    color: #fff;
+    line-height: 1.5;
+}
+
+.navbar-black {
+    background-color: black; /* Set background color to black */
+    color: white; /* Ensure text is visible */
+    padding-top: 20px; /* Remove extra padding */
+    padding-bottom: 20px;
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Vertically center the text */
+}
+
+.navbar-black .navbar-nav {
+    gap: 30px; /* Adds space between nav links */
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.navbar-black .navbar-nav .nav-link {
+    color: white; /* Change text color */
+}
+
+.navbar-black .navbar-nav .nav-link:hover {
+    color: gray; /* Optional: Add hover effect */
+}
+
+.navbar-black .navbar-nav .nav-link {
+    color: white; /* Change text color */
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    font-size: 0.9rem;
+    color: #777;
+    width: 100%;
+}
+
+/* Artikelstijl voor elke game */
+article {
+    background: #111; /* Donkere achtergrond voor fallback */
+    border-radius: 8px;
+    width: 200px; /* Vaste breedte */
+    overflow: hidden; /* Zorgt dat de afbeelding niet buiten het artikel gaat */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Zet de inhoud in een kolom */
+    align-items: center;
+}
+
+article:hover {
+    transform: scale(1.05); /* Vergroot bij hover */
+}
+
+/* Afbeeldingen als achtergrond */
+article img {
+    width: 100%; /* Neem de volledige breedte in */
+    height: 150px; /* Vastgestelde hoogte */
+    object-fit: cover; /* Zorg ervoor dat de afbeelding het hele gebied vult */
+    border-radius: 8px 8px 0 0; /* Maak de bovenste hoeken rond */
+    margin: 0; /* Verwijder witruimte */
+}
+
+/* Tekst onder de afbeelding */
+article p {
+    margin: 15px 10px; /* Ruimte om de tekst */
+    font-size: 14px;
+    color: #fff;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px; /* Ruimte tussen de games */
+    padding: 20px;
+    text-align: center;
+}
+
+.mailing-list {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mailing-list h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.mailing-list p {
+    margin-bottom: 15px;
+    color: #bbb;
+}
+
+.mailing-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background-color: #111;
+    color: #fff;
+}
+
+.mailing-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.mailing-btn:hover {
+    background-color: #e777;
+}
