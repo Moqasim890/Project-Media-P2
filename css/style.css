@@ -141,3 +141,116 @@ section {
 .mailing-btn:hover {
     background-color: #e777;
 }
+
+.about{
+    display: flex; 
+    position: relative;
+    justify-content: center;
+    margin-top: 1%;
+    color: rgb(234, 0, 0);
+    font-family: 'Arial', sans-serif;
+    font-size: 100em;
+    animation: slideIn 2s ease-out;
+    background: linear-gradient(8000deg, #000000, #8f0000);
+    color: rgb(255, 255, 255);
+    padding: 2px;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 400px !important;
+    height: 60px !important;
+    
+
+}
+
+@keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .faq-item1{
+    color: #fff;
+position: relative;
+left: 37%;
+text-align: center;
+border: brown solid 1px;
+width: 400px !important;
+border-radius: 40px;
+background-color: #000000;
+margin-bottom: 20px;
+padding: 30px;
+bottom: -70px; 
+
+
+  }
+  .faq-item2{
+    color: #fff;
+position: relative;
+left: 37%;
+text-align: center;
+border: brown solid 1px;
+width: 400px !important;
+border-radius: 40px;
+background-color: #000000;
+margin-bottom: 20px;
+padding: 30px;
+bottom: -90px; 
+
+
+
+  }
+  .faq-item3{
+    color: #fff;
+position: relative;
+left: 37%;
+text-align: center;
+border: brown solid 1px;
+width: 400px !important;
+border-radius: 40px;
+background-color: #000000;
+margin-bottom: 20px;
+padding: 30px;
+bottom: -120px; 
+
+
+  }
+  .faq-item4{
+    color: #fff;
+position: relative;
+left: 37%;
+text-align: center;
+border: brown solid 1px;
+width: 400px !important;
+border-radius: 40px;
+background-color: #000000;
+margin-bottom: 300px;
+padding: 30px;
+bottom: -150px; 
+
+  }
+  .faq-container h1{
+    display: flex; 
+    position: relative;
+    justify-content: center;
+    margin-top: 1%;
+    color: rgb(234, 0, 0);
+    font-family: 'Arial', sans-serif;
+    font-size: 100em;
+    animation: slideIn 2s ease-out;
+    background: linear-gradient(8000deg, #000000, #8f0000);
+    color: rgb(255, 255, 255);
+    padding: 1em !important;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 400px !important;
+    height: 60px !important;
+    text-align: center;
+ margin-bottom: 30px;
+    
+
+}
