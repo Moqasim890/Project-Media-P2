@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #220d0c, #000000 25%, #531000 50%, #000000 75%, #8b2902);
+    color: #fff;
+    line-height: 1.5;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #111;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%; 
+}
+
+header button {
+    color: linear-gradient(135deg, #220d0c, #000000 25%, #531000 50%, #000000 75%, #8b2902);
+    background: #777;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+header button:hover {
+    background-color: #777;
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+main h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.view-all {
+    margin-top: 20px;
+    background: transparent;
+    border: 2px solid #e777;
+    color: #e777;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.view-all:hover {
+    background-color: #e777;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    font-size: 0.9rem;
+    color: #777;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Search Bar and Button */
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    padding: 5px;
+    border-radius: 5px;
+    flex-grow: 1; /* Makes the search bar take up more space */
+    margin-right: 20px; /* Space between search bar and sign in */
+    width: auto;
+}
+
+.search-bar {
+    background-color: #111;
+    color: #fff;
+    padding: 8px 12px; /* Slightly bigger padding */
+    border: 1px solid #777;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 200px; /* Set a minimum width */
+}
+
+.search-btn {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background-color: #e777;
+}
+
+/* Dark/Light Mode Button */
+.mode-toggle {
+    background: transparent;
+    border: 2px solid #777;
+    color: #777;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mode-toggle:hover {
+    background-color: #777;
+    color: white;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #111;
+    color: #fff;
+}
+
+header.dark-mode {
+    background-color: #222;
+}
+
+/* Light Mode Styles */
+body.light-mode {
+    background-color: #fff;
+    color: #000;
+}
+
+header.light-mode {
+    background-color: #f1f1f1;
+}
+
+.temp-img {
+    display: block;
+    margin: 10px auto;
+    border-radius: 5px;
+    border: 2px solid #fff;
+}
+
+.download-btn {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Dropdown Button */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #777;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.dropbtn:hover {
+    background-color: #555;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #111;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    top: 40px; /* Adjusts the position below the menu */
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+/* Show the dropdown when hovering */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Artikelstijl voor elke game */
+article {
+    background: #111; /* Donkere achtergrond voor fallback */
+    border-radius: 8px;
+    width: 200px; /* Vaste breedte */
+    overflow: hidden; /* Zorgt dat de afbeelding niet buiten het artikel gaat */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Zet de inhoud in een kolom */
+    align-items: center;
+}
+
+article:hover {
+    transform: scale(1.05); /* Vergroot bij hover */
+}
+
+/* Afbeeldingen als achtergrond */
+article img {
+    width: 100%; /* Neem de volledige breedte in */
+    height: 150px; /* Vastgestelde hoogte */
+    object-fit: cover; /* Zorg ervoor dat de afbeelding het hele gebied vult */
+    border-radius: 8px 8px 0 0; /* Maak de bovenste hoeken rond */
+    margin: 0; /* Verwijder witruimte */
+}
+
+/* Tekst onder de afbeelding */
+article p {
+    margin: 15px 10px; /* Ruimte om de tekst */
+    font-size: 14px;
+    color: #fff;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px; /* Ruimte tussen de games */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-container {
+        width: 100%; /* Make search container full width */
+        margin-bottom: 10px;
+    }
+
+    .mode-toggle, .signin {
+        margin-top: 10px;
+    }
+}
