@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+.container {
+    position: relative;
+    margin: 0;
+
+}
+
+
+.container .wrapper {
+    position: relative;
+    width: 100%; /* Larger width */
+    height: 90vh; /* Larger height */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6); 
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 1rem 0; /* Center horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .wrapper-holder {
+    display: grid;
+    grid-template-columns: repeat(4, 100%);
+    height: 100%;
+    width: 100%;
+    animation: slider 30s ease-in-out infinite alternate;
+}
+
+.container #slider-img-1 {
+    background-image: url(https://gamingbolt.com/wp-content/uploads/2024/05/call-of-duty-black-ops-6-1.jpg);
+    background-position: center;
+}
+
+.container #slider-img-2 {
+    background-image: url(https://www.gtavice.net/content/images/gta6-logo.png);
+    background-position: center;
+}
+
+.container #slider-img-3 {
+    background-image: url(https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_TheWitcher3WildHuntCompleteEdition_enGB.jpg);
+    background-position: center;
+}
+
+.container #slider-img-4 {
+    background-image: url(https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_download_software_1/2x1_NSwitchDS_Fortnite.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container .button-holder .button {
+    background-color: white;
+    width: 16px;
+    height: 16px;
+    border-radius: 15px;
+    display: inline-block;
+    margin: 3rem;
+}
+
+.container .button-holder {
+    position: absolute;
+    left: 33%;
+    bottom: 0%;
+}
+button:hover {
+    box-shadow: 0px 0px 7px 4px rgba(27, 196, 196, 0.6);
+}
+@keyframes slider {
+    0%{transform: translatex(0%);}
+    10%{transform: translatex(-100%);}
+    20%{transform: translatex(-100%);}
+    30%{transform: translatex(-200%);}
+    40%{transform: translatex(-200%);}
+    50%{transform: translatex(-200%);}
+    60%{transform: translatex(-300%);}
+    70%{transform: translatex(-300%);}
+    80%{transform: translatex(-300%);}
+    90%{transform: translatex(0%);}
+    100%{transform: translatex(0%);}
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .container .wrapper {
+        width: 100%; /* Adjust width for smaller screens */
+        height: 60vh; /* Adjust height for smaller screens */
+    }
+
+    .container .button-holder .button {
+        width: 12px;
+        height: 12px; /* Smaller buttons for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container .wrapper {
+        width: 95vw; /* Almost full width */
+        height: 50vh; /* Smaller height */
+    }
+
+    .container .button-holder {
+        bottom: 0.5rem; /* Move buttons closer to slider */
+    }
+
+    .container .button-holder .button {
+        width: 10px;
+        height: 10px; /* Even smaller buttons */
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container .wrapper {
+        width: 90%; /* Make the wrapper narrower */
+        height: 70vh; /* Adjust the height */
+    }
+
+    .container #slider-img-1,
+    .container #slider-img-2,
+    .container #slider-img-3,
+    .container #slider-img-4 {
+        background-size: cover; /* Ensure images cover the container */
+        background-position: center; /* Center the images */
+    }
+
+    .container .wrapper-holder {
+        grid-template-columns: repeat(4, 100%); /* Maintain proper grid alignment */
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container .button-holder {
+        top: auto;
+        bottom: 1rem; /* Move to the bottom */
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: row; /* Arrange horizontally */
+        gap: 0.5rem; /* Reduce spacing */
+    }
+}
