@@ -1,32 +1,48 @@
-.container {
+.contactcontainer {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
     background: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+    font-family: Arial, sans-serif; /* Ensure consistent font styling */
 }
 
-h1 {
+.contactcontainer h1 {
     text-align: center;
     color: #333;
+    font-size: 1.8em;
+    margin-bottom: 20px;
 }
-form {
+
+.contactcontainer form {
     display: flex;
     flex-direction: column;
 }
-label {
+
+.contactcontainer label {
     margin: 10px 0 5px;
     font-weight: bold;
+    color: #444;
 }
-input, textarea {
+
+.contactcontainer input, 
+.contactcontainer textarea {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-bottom: 15px;
+    box-sizing: border-box;
 }
-button {
+
+.contactcontainer input:focus, 
+.contactcontainer textarea:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+.contactcontainer button {
     padding: 10px;
     font-size: 16px;
     color: #ffffff;
@@ -35,11 +51,12 @@ button {
     border-radius: 4px;
     cursor: pointer;
 }
-button:hover {
-    background-color: #0056b3;
+
+.contactcontainer button:hover {
+    background-color: #d30000;
 }
 
-.call-button {
+.contactcontainer .call-button {
     display: block;
     text-align: center;
     padding: 10px;
@@ -51,6 +68,7 @@ button:hover {
     margin-top: 15px;
     cursor: pointer;
 }
-.call-button:hover {
-    background-color: #0056b3;
+
+.contactcontainer .call-button:hover {
+    background-color: #d30000;
 }

@@ -28,7 +28,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-black">
+  <nav class="navbar navbar-expand-lg navbar-black sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Home</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -67,92 +67,94 @@
       </div>
     </div>
   </nav>
+<!--FAQ hernan-->
+<div class="container my-5">
+  <h1 class="text-center mb-4" style="color: white;">Video Game FAQ</h1>
+  <div class="accordion" id="faqAccordion">
 
-
-  <div class="faq-container">
-    <h1>Game Downloads FAQ</h1>
-    <div class="faq-item1">
-      <div class="faq-question">1. How can I download the game?</div>
-      <div class="faq-answer">You can download the game by going to the download page and following the instructions for your platform (Windows, Mac, or mobile). 
-        Make sure your device meets the minimum system requirements. The download will start automatically.
-      </div>
-    </div>
-    <div class="faq-item2">
-      <div class="faq-question">2. Which platforms support this game?</div>
-      <div class="faq-answer">The game is available on PC, Mac, and mobile devices (iOS and Android). 
-        Check the system requirements to see if your device is compatible.</div>
-    </div>
-    </div>
-    <div class="faq-item3">
-      <div class="faq-question"> Are the games free to download?</div>
-      <div class="faq-answer">Most games are free to download, but some may require a purchase or subscription.</div>
-    </div>
-    <div class="faq-item4">
-      <div class="faq-question"> What platforms are supported?</div>
-      <div class="faq-answer">Our games are available for Windows, macOS, and some are compatible with Linux. Mobile
-        versions are also available for iOS and Android.</div>
-    </div>
-    <div class="faq-item5">
-      <div class="faq-question">5. What should I do if I encounter a bug or issue? </div>
-      <div class="faq-answer">If you encounter a bug or issue, please contact our support team through the "Contact" page. 
-        Provide as many details as possible so we can resolve it quickly.</div>
-    </div>
-    <div class="faq-item6">
-      <div class="faq-question">6. Are there any subscription options available?</div>
-      <div class="faq-answer">Yes, we offer a subscription service that gives you access to exclusive discounts, free monthly games, and more. 
-        Check out the "Subscription" page for details on how to sign up and the benefits you’ll receive.</div>
-    </div>
-    <div class="faq-item5">
-      <div class="faq-question">7. Can I refund a game if I don’t like it?</div>
-      <div class="faq-answer">Yes, we offer a refund policy for games that are returned within 14 days of purchase, 
-      provided that the game has been played for less than 2 hours. For full details, visit our Refund Policy page.</div>
-    </div>
-    <div class="faq-item5">
-      <div class="faq-question">8. What should I do if I encounter a bug or issue? </div>
-      <div class="faq-answer">If you encounter a bug or issue, please contact our support team through the "Contact" page. 
-        Provide as many details as possible so we can resolve it quickly.</div>
-    </div>
-    <script>
-      const questions = document.querySelectorAll('.faq-question');
-
-      questions.forEach(question => {
-        question.addEventListener('click', () => {
-          const answer = question.nextElementSibling;
-          const isOpen = answer.style.display === 'block';
-
-          document.querySelectorAll('.faq-answer').forEach(item => item.style.display = 'none');
-
-          if (!isOpen) {
-            answer.style.display = 'block';
-          }
-        });
-      });
-    </script>
-  </div>
-  <footer>
-    <div class="container text-center">
-      <div class="row align-items-center">
-        <div class="col">
-          <p class="p-footer">Project Media P2 © 2024</p>
-          <p class="p-footer">© 2024 Hernan Inc. All Rights Reserved.</p>
-        </div>
-        <div class="col">
-          <div class="mailing-list">
-            <h2>Join Our Mailing List</h2>
-            <p>Stay updated with our latest news and offers.</p>
-            <form id="mailing-form" action="your-backend-url" method="POST">
-              <input type="email" name="email" placeholder="Enter your email" required class="mailing-input">
-              <button type="submit" class="mailing-btn">Subscribe</button>
-            </form>
+      <!-- Question 1 -->
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  What is the most popular video game genre?
+              </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                  The most popular video game genres include action, role-playing games (RPGs), and first-person shooters (FPS). Their popularity varies depending on player preferences and trends.
+              </div>
           </div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  What is cross-platform gaming?
+              </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                  Cross-platform gaming allows players using different devices or consoles (e.g., PlayStation, Xbox, PC) to play together in the same game.
+              </div>
+          </div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  How do I improve my gaming skills?
+              </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                  To improve your gaming skills, practice regularly, watch tutorials or streams, join gaming communities, and experiment with different strategies. Staying calm and focused is also key.
+              </div>
+          </div>
+      </div>
+
+      <!-- Add more questions -->
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  What are microtransactions in video games?
+              </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                  Microtransactions are small payments made within games to unlock additional content, such as skins, weapons, or experience boosts. They are common in free-to-play games.
+              </div>
+          </div>
+      </div>
+
+  </div>
+</div>
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<footer>
+  <div class="container text-center">
+    <div class="row align-items-center">
+      <div class="col">
+        <p class="p-footer">Project Media P2 © 2024</p>
+        <p class="p-footer">© 2024 Hernan Inc. All Rights Reserved.</p>
+      </div>
+      <div class="col">
+        <div class="mailing-list">
+          <h2>Join Our Mailing List</h2>
+          <p>Stay updated with our latest news and offers.</p>
+          <form id="mailing-form" action="your-backend-url" method="POST">
+            <input type="email" name="email" placeholder="Enter your email" required class="mailing-input">
+            <button type="submit" class="mailing-btn">Subscribe</button>
+          </form>
         </div>
       </div>
     </div>
+  </div>
 
-
-
-
-  </footer>
+</footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
