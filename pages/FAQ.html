@@ -72,23 +72,45 @@
   <div class="faq-container">
     <h1>Game Downloads FAQ</h1>
     <div class="faq-item1">
-      <div class="faq-question"> How do I download a game?</div>
-      <div class="faq-answer">Click on the "Download" button on the game's page. The download will start automatically.
+      <div class="faq-question">1. How can I download the game?</div>
+      <div class="faq-answer">You can download the game by going to the download page and following the instructions for your platform (Windows, Mac, or mobile). 
+        Make sure your device meets the minimum system requirements. The download will start automatically.
       </div>
     </div>
     <div class="faq-item2">
+      <div class="faq-question">2. Which platforms support this game?</div>
+      <div class="faq-answer">The game is available on PC, Mac, and mobile devices (iOS and Android). 
+        Check the system requirements to see if your device is compatible.</div>
+    </div>
+    </div>
+    <div class="faq-item3">
       <div class="faq-question"> Are the games free to download?</div>
       <div class="faq-answer">Most games are free to download, but some may require a purchase or subscription.</div>
     </div>
-    <div class="faq-item3">
+    <div class="faq-item4">
       <div class="faq-question"> What platforms are supported?</div>
       <div class="faq-answer">Our games are available for Windows, macOS, and some are compatible with Linux. Mobile
         versions are also available for iOS and Android.</div>
     </div>
-    <div class="faq-item4">
-      <div class="faq-question"> How can I report a bug in a game?</div>
-      <div class="faq-answer">You can report bugs by visiting our support page and filling out the bug report form.
-      </div>
+    <div class="faq-item5">
+      <div class="faq-question">5. What should I do if I encounter a bug or issue? </div>
+      <div class="faq-answer">If you encounter a bug or issue, please contact our support team through the "Contact" page. 
+        Provide as many details as possible so we can resolve it quickly.</div>
+    </div>
+    <div class="faq-item6">
+      <div class="faq-question">6. Are there any subscription options available?</div>
+      <div class="faq-answer">Yes, we offer a subscription service that gives you access to exclusive discounts, free monthly games, and more. 
+        Check out the "Subscription" page for details on how to sign up and the benefits you’ll receive.</div>
+    </div>
+    <div class="faq-item5">
+      <div class="faq-question">7. Can I refund a game if I don’t like it?</div>
+      <div class="faq-answer">Yes, we offer a refund policy for games that are returned within 14 days of purchase, 
+      provided that the game has been played for less than 2 hours. For full details, visit our Refund Policy page.</div>
+    </div>
+    <div class="faq-item5">
+      <div class="faq-question">8. What should I do if I encounter a bug or issue? </div>
+      <div class="faq-answer">If you encounter a bug or issue, please contact our support team through the "Contact" page. 
+        Provide as many details as possible so we can resolve it quickly.</div>
     </div>
     <script>
       const questions = document.querySelectorAll('.faq-question');
@@ -108,8 +130,28 @@
     </script>
   </div>
   <footer>
-    <p>Project Media P2 © 2024</p>
-    <p>mbo utrecht team</p>
+    <div class="container text-center">
+      <div class="row align-items-center">
+        <div class="col">
+          <p class="p-footer">Project Media P2 © 2024</p>
+          <p class="p-footer">© 2024 Hernan Inc. All Rights Reserved.</p>
+        </div>
+        <div class="col">
+          <div class="mailing-list">
+            <h2>Join Our Mailing List</h2>
+            <p>Stay updated with our latest news and offers.</p>
+            <form id="mailing-form" action="your-backend-url" method="POST">
+              <input type="email" name="email" placeholder="Enter your email" required class="mailing-input">
+              <button type="submit" class="mailing-btn">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
