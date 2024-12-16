@@ -1,0 +1,48 @@
+/* Custom styles to match the design */
+.gift-card-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #2d3b45;
+    border-radius: 8px;
+    padding: 20px;
+    color: white;
+  }
+  .gift-card-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .gift-card-header h4 {
+    font-size: 1.5rem;
+  }
+  .gift-card-header p {
+    font-size: 1rem;
+    color: #b0b0b0;
+  }
+  .gift-card-amount {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .gift-card-amount button {
+    background-color: #3a5a9f;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 120px;
+  }
+  .gift-card-amount button:hover {
+    background-color: #5b7bcb;
+  }
+  .footer-links {
+    text-align: center;
+    margin-top: 15px;
+  }
+  .footer-links a {
+    color: #b0b0b0;
+    text-decoration: none;
+  }
+  .footer-links a:hover {
+    color: white;
+  }

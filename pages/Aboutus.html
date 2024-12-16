@@ -29,55 +29,70 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-black">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Home</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="../index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="games.html">Games</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Aboutus.html">About us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="FAQ.html">FAQ</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav ms-auto" class="navbarNav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
-          </li>
-          <li class="nav-item">
-            <span class="nav-link">|</span>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="">Register</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <h1>About us</h1>
-  <div class="container text-center  about col-6">
-    <div class="row align-items-start">
-      <div class="col-12">
-        <h1>team</h1>
-        <table>
+  <div id="navbar"></div> <!-- Placeholder for the navbar -->
+  
+  <script>
+    // Use Fetch API to load the navbar HTML
+    fetch('../navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading the navbar:', error));
+  </script>
+  
 
-        </table>
-      </div>
+  <div class="container text-center mt-5">
+    <h1 class="text-white">About Us</h1>
+    <p class="text-white-50 mt-3">
+      Welcome to our gaming website! Our goal is to bring gamers together by providing news, reviews, and community
+      events. Meet the awesome team behind it all.
+    </p>
+  </div>
 
+  <div class="container mt-5">
+    <h2 class="text-center text-white mb-4">Meet the Team</h2>
+    <div class="row">
+      <!-- Team Member 1 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="/img/Hernan.png" class="card-img-top" alt="Hernan Martino">
+          <div class="card-body text-center">
+            <h5 class="card-title">Hernan Martino</h5>
+            <p class="card-text">Founder & Developer</p>
+          </div>
+        </div>
+      </div>
+      <!-- Team Member 2 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="/img/danny.jpg" class="card-img-top" alt="Danny E">
+          <div class="card-body text-center">
+            <h5 class="card-title">Danny E</h5>
+            <p class="card-text">Content Creator</p>
+          </div>
+        </div>
+      </div>
+      <!-- Team Member 3 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Mo">
+          <div class="card-body text-center">
+            <h5 class="card-title">Mo</h5>
+            <p class="card-text">Graphic Designer</p>
+          </div>
+        </div>
+      </div>
+      <!-- Team Member 4 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Fahim">
+          <div class="card-body text-center">
+            <h5 class="card-title">Fahim</h5>
+            <p class="card-text">Marketing Specialist</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

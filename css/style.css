@@ -41,11 +41,22 @@ body {
     background-color: white; /* Ensures the toggler icon is visible */
 }
 
+/**/
 .carousel-inner img {
     margin-top: 1%;
     height: 90vh; /* Set a fixed height */
     object-fit: cover; /* Keeps the aspect ratio while filling the height and width */
 }
+
+.carousel img {
+    max-height: 500px; /* Adjust height to make it narrower */
+    object-fit: cover; /* Ensures the image fills the width proportionally */
+  }
+  .carousel {
+    width: 100%; /* Ensures it spans the full width of the screen */
+    margin: 0 auto;
+  }
+
 
 footer {
     text-align: center;
@@ -272,3 +283,5 @@ bottom: -150px;
   .faq-answer.open {
     display: block; /* Visible when the 'open' class is added */
   }  
+
+  
