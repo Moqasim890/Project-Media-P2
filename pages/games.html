@@ -27,174 +27,340 @@
 </head>
 <body>
         
-  <nav class="navbar navbar-expand-lg navbar-black">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Home</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="../index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="games.html">Games</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Aboutus.html">About us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="FAQ.html">FAQ</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav ms-auto"  class="navbarNav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
-          </li>
-          <li class="nav-item">
-            <span class="nav-link">|</span>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="">Register</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-</nav>
+  <div id="navbar" class="sticky-top"></div> <!-- Placeholder for the navbar -->
+  
+  <script>
+    // Use Fetch API to load the navbar HTML
+    fetch('../navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading the navbar:', error));
+  </script>
 
-<h1 class="h1center">Games</h1>
+ <!-- FAQ Header Section with Enhanced Animated Gradient -->
+ <section class="text-center py-5 mainheader">
+    <h1 class="display-4">All games</h1>
+    <p class="lead">Browse all your favorite games in one go!</p>
+  </section>
 
-<div class="container">
-        
-    <div class="card">
-        <img src="https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/7337.jpeg.webp" alt="Gta V">
-        <h2>Gta V:</h2>
-        <p>Open world</p>
-    </div>
-
-    <div class="card">
-        <img src="https://media.wired.com/photos/5bf3269686ef9a0ff73f017b/master/pass/BFV_CampaignArt.jpg" alt="Battlefield V">
-        <h2>Battlefield V:</h2>
-        <p>first person shooter</p>
-      </div>
-
-    <div class="card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5bjlQRepw3P4dXzf7SyuXy1lwcWTkCpkJXg&s" alt="Black Ops 6">
-        <h2>Black Ops 6:</h2>
-        <p>First person shooter</p>
-    </div>
-
-    <div class="card">
-        <img src="https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_TheWitcher3WildHuntCompleteEdition_enGB.jpg" alt="Witcher lll">
-        <h2>Witcher lll wild hunt:</h2>
-        <p>Open world</p>
-    </div>
-
-    <div class="card">
-        <img src="https://gaming-cdn.com/images/products/4409/616x353/borderlands-3-xbox-one-xbox-series-x-s-spel-microsoft-store-europe-cover.jpg?v=1733311871" alt="Borderlands 3">
-        <h2>Borderlands 3:</h2>
-        <p>fantasie open world</p>
-    </div>
-    <div class="card">
-      <img src="https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/garry-s-mod-file-53912cf2.jpeg.webp" alt="Garry mods">
-      <h2>Garry mods:</h2>
-      <p>Simulation video game</p>
-  </div>
-
-  <div class="card">
-      <img src="https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_download_software_1/2x1_NSwitchDS_Fortnite.jpg" alt="Fortnite">
-      <h2>Fortnite:</h2>
-      <p>Battle royal</p>
-  </div>
-
-  <div class="card">
-      <img src="https://www.gtavice.net/content/images/gta6-logo.png" alt="Gta VI">
-      <h2>Gta VI:</h2>
-      <p>Open world</p>
-  </div>
-
-  <div class="card">
-      <img src="https://variety.com/wp-content/uploads/2019/02/pubg-mobile-1.png?w=681&h=383&crop=1" alt="PubG">
-      <h2>PubG:</h2>
-      <p>Battle royal</p>
-  </div>
-
-  <div class="card">
-      <img src="https://mms.businesswire.com/media/20190204005535/en/703803/5/APEX_Primary_Art_72dpi_RGB_FIN.jpg" alt="Apex Legends">
-      <h2>Apex Legends:</h2>
-      <p>First person shooter</p>
-  </div>
-  <div class="card">
-    <img src="https://www.teamvvv.com/wp-content/uploads/2016/02/Need-for-Speed-2015-header-art.jpg" alt="Need for speed">
-    <h2>Need for speed:</h2>
-    <p>Race game</p>
- </div>
-
-  <div class="card">
-    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202307/2708/28833b618429cfe5f65d24ea11933ae62e3308ea7d2015be.png" alt="The crew 2">
-    <h2>Battlefield V:</h2>
-    <p>Open world first person shooter</p>
-  </div>
-
-  <div class="card">
-    <img src="https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/2x1_NSwitch_Minecraft.jpg" alt="Minecraft">
-    <h2>Minecraft:</h2>
-    <p>Block open world</p>
-  </div>
-
-  <div class="card">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLEhimQT5F23haMAU6d1fokhUuPA4oGdQUfg&s" alt="Black ops III">
-    <h2>Black ops III:</h2>
-    <p>First person shooter</p>
-  </div>
-
-  <div class="card">
-    <img src="https://store-images.s-microsoft.com/image/apps.7566.69886306496288395.3699bb4a-83a0-4ce6-b5b0-ffeae2db7441.03cb28c2-4203-40bb-a29a-521ce20cf129?q=90&w=480&h=270" alt="Dayz">
-    <h2>Dayz:</h2>
-    <p>survival</p>
-  </div>
-  <div class="card">
-    <img src="https://external-preview.redd.it/possible-uncharted-1-remake-v0-7hdLTZypZKCuzKRvNb8gPFMOdsM0LLt8TrQKp855uQE.jpg?auto=webp&s=e60255a5d840c2437f3b4c0aa159f73b61e22d13" alt="uncharted remake">
-    <h2>uncharted remake:</h2>
-    <p>Open world</p>
-  </div>
-
-  <div class="card">
-    <img src="https://i.redd.it/09ru73uiidb71.jpg" alt="Terarria">
-    <h2>Terarria:</h2>
-    <p>Open world survival</p>
-  </div>
-
-  <div class="card">
-    <img src="https://arena.tarkov.com/uploads/images/normal/5dee28d3c172909a9c762809e083b652.png" alt="Tarkof">
-    <h2>Tarkof:</h2>
-    <p>Battle royal</p>
-  </div>
-
-  <div class="card">
-    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1551360/capsule_616x353.jpg?t=1730830713" alt="Forza horizon 5">
-    <h2>Forza horizon 5:</h2>
-    <p>Race game</p>
-  </div>
-
-  <div class="card">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkL6Y3q8QvFCt14QGhwu__DieDfLuXVMjjHA&s" alt="Rainbow six siege">
-    <h2>Rainbow six siege:</h2>
-    <p>First person shooter</p>
-  </div>
-
+<!--Search bar-->
+<div class="search-container">
+    <input type="text" id="name-search" placeholder="Search by game name..." />
+    <button id="search-button">Search</button>
 </div>
-    <footer>
-        <p>Project Media P2 © 2024</p>
-        <p>mbo utrecht team</p>
-    </footer>
+  
+<div class="container">
+    
 
+    <!---->
+    <div class="card" data-name="The Elder Scrolls V: Skyrim">
+        <img src="/img/elder scrolss v.webp" alt="The Elder Scrolls V: Skyrim">
+        <h2>The Elder Scrolls V: Skyrim:</h2>
+        <p>RPG Open world</p>
+    </div>
+    <div class="card" data-name="The Last of Us Part II">
+        <img src="/img/last of us II.avif" alt="The Last of Us Part II">
+        <h2>The Last of Us Part II:</h2>
+        <p>Action-adventure</p>
+    </div>
+    <div class="card" data-name="Minecraft">
+        <img src="/img/minecraft.jpg" alt="Minecraft">
+        <h2>Minecraft:</h2>
+        <p>Sandbox</p>
+    </div>
+    <div class="card" data-name="Grand Theft Auto V">
+        <img src="/img/gtaV.jpeg" alt="Grand Theft Auto V">
+        <h2>Grand Theft Auto V:</h2>
+        <p>Open world</p>
+    </div>
+    <div class="card" data-name="Cyberpunk 2077">
+        <img src="/img/cyber punk.jpg" alt="Cyberpunk 2077">
+        <h2>Cyberpunk 2077:</h2>
+        <p>RPG Open world</p>
+    </div>
+    <div class="card" data-name="Fortnite">
+        <img src="/img/fortnite-slide.jpg" alt="Fortnite">
+        <h2>Fortnite:</h2>
+        <p>Battle Royale</p>
+    </div>
+    <div class="card" data-name="Rocket League">
+        <img src="/img/rocket-league.png" alt="Rocket League">
+        <h2>Rocket League:</h2>
+        <p>Sports</p>
+    </div>
+    <div class="card" data-name="Apex Legends">
+        <img src="/img/apex.jpg" alt="Apex Legends">
+        <h2>Apex Legends:</h2>
+        <p>Battle Royale</p>
+    </div>
+    <div class="card" data-name="Call of Duty: Warzone">
+        <img src="/img/call of duty warzone.webp" alt="Call of Duty: Warzone">
+        <h2>Call of Duty: Warzone:</h2>
+        <p>Battle Royale</p>
+    </div>
+    <div class="card" data-name="Overwatch">
+        <img src="/img/overwatch.webp" alt="Overwatch">
+        <h2>Overwatch:</h2>
+        <p>First-person shooter</p>
+    </div>
+    <div class="card" data-name="Fall Guys">
+        <img src="/img/fallguys.jpg" alt="Fall Guys">
+        <h2>Fall Guys:</h2>
+        <p>Battle Royale</p>
+    </div>
+    <div class="card" data-name="Stardew Valley">
+        <img src="/img/stardewvalley.jpg" alt="Stardew Valley">
+        <h2>Stardew Valley:</h2>
+        <p>Life Simulation</p>
+    </div>
+    <div class="card" data-name="Red Dead Redemption 2">
+        <img src="/img/red dead redemption.avif" alt="Red Dead Redemption 2">
+        <h2>Red Dead Redemption 2:</h2>
+        <p>Action-adventure Open world</p>
+    </div>
+    <div class="card" data-name="Hades">
+        <img src="/img/hades.avif" alt="Hades">
+        <h2>Hades:</h2>
+        <p>Action Roguelike</p>
+    </div>
+    <div class="card" data-name="The Witcher 3: Wild Hunt">
+        <img src="/img/witcher.png" alt="The Witcher 3: Wild Hunt">
+        <h2>The Witcher 3: Wild Hunt:</h2>
+        <p>RPG Open world</p>
+    </div>
+    <div class="card" data-name="The Legend of Zelda: Breath of the Wild">
+        <img src="/img/breath of the wild.jpg" alt="The Legend of Zelda: Breath of the Wild">
+        <h2>The Legend of Zelda: Breath of the Wild:</h2>
+        <p>Action-adventure Open world</p>
+    </div>
+    <div class="card" data-name="Minecraft Dungeons">
+        <img src="/img/minecraft dunguens.avif" alt="Minecraft Dungeons">
+        <h2>Minecraft Dungeons:</h2>
+        <p>Action RPG</p>
+    </div>
+    <div class="card" data-name="Monster Hunter: World">
+        <img src="/img/monster hunter worlds.jpg" alt="Monster Hunter: World">
+        <h2>Monster Hunter: World:</h2>
+        <p>Action RPG</p>
+    </div>
+    <div class="card" data-name="Far Cry 5">
+        <img src="/img/farcry 5.jpg" alt="Far Cry 5">
+        <h2>Far Cry 5:</h2>
+        <p>First-person shooter</p>
+    </div>
+    <div class="card" data-name="Bioshock Infinite">
+        <img src="/img/bioshock infinite.jpg" alt="Bioshock Infinite">
+        <h2>Bioshock Infinite:</h2>
+        <p>First-person shooter</p>
+    </div>
+    <div class="card" data-name="Dead by Daylight">
+        <img src="/img/dead by daylight.webp" alt="Dead by Daylight">
+        <h2>Dead by Daylight:</h2>
+        <p>Horror Multiplayer</p>
+    </div>
+    <div class="card" data-name="Destiny 2">
+        <img src="/img/Destiny_2.jpg" alt="Destiny 2">
+        <h2>Destiny 2:</h2>
+        <p>First-person shooter MMORPG</p>
+    </div>
+    <div class="card" data-name="Persona 5 ">
+        <img src="/img/Persona_5.jpg" alt="Persona 5">
+        <h2>Persona 5:</h2>
+        <p>JRPG</p>
+    </div>
+    <div class="card" data-name="Diablo III">
+        <img src="/img/diablo 3.avif" alt="Diablo III">
+        <h2>Diablo III:</h2>
+        <p>Action RPG</p>
+    </div>
+    <div class="card" data-name="Uncharted 4: A Thief's End">
+        <img src="/img/uncharted 4.avif" alt="Uncharted 4: A Thief's End">
+        <h2>Uncharted 4: A Thief's End:</h2>
+        <p>Action-adventure</p>
+    </div>
+    <div class="card" data-name="Assassin's Creed Odyssey">
+        <img src="/img/assisainscrees oddysoy.jpg" alt="Assassin's Creed Odyssey">
+        <h2>Assassin's Creed Odyssey:</h2>
+        <p>Action RPG Open world</p>
+    </div>
+    <div class="card" data-name="Kingdom Hearts III">
+        <img src="/img/kingdom hearts 3.webp" alt="Kingdom Hearts III">
+        <h2>Kingdom Hearts III:</h2>
+        <p>Action RPG</p>
+    </div>
+    <div class="card" data-name="The Division 2">
+        <img src="/img/division.jpg" alt="The Division 2">
+        <h2>The Division 2:</h2>
+        <p>Third-person shooter</p>
+    </div>
+    <div class="card" data-name="Warframe">
+        <img src="/img/Warframe.png" alt="Warframe">
+        <h2>Warframe:</h2>
+        <p>Action RPG</p>
+    </div>
+    <div class="card" data-name="League of Legends">
+        <img src="/img/league-of-legends.webp" alt="League of Legends">
+        <h2>League of Legends:</h2>
+        <p>MOBA</p>
+    </div>
+    <div class="card" data-name="Valorant">
+        <img src="/img/Valorant.webp" alt="Valorant">
+        <h2>Valorant:</h2>
+        <p>Tactical Shooter</p>
+    </div>
+    <div class="card" data-name="Ghost of Tsushima">
+        <img src="/img/Ghost_of_Tsushima.jpg" alt="Ghost of Tsushima">
+        <h2>Ghost of Tsushima:</h2>
+        <p>Action-adventure</p>
+    </div>
+    <div class="card" data-name="Sea of Thieves">
+        <img src="/img/sea of thieves.avif" alt="Sea of Thieves">
+        <h2>Sea of Thieves:</h2>
+        <p>Action-adventure</p>
+    </div>
+    <div class="card" data-name="Gears 5">
+        <img src="/img/gears 5.jpg" alt="Gears 5">
+        <h2>Gears 5:</h2>
+        <p>Third-person shooter</p>
+    </div>
+    <div class="card" data-name="Star Wars Jedi: Fallen Order">
+        <img src="/img/jedi fallen order.webp" alt="Star Wars Jedi: Fallen Order">
+        <h2>Star Wars Jedi: Fallen Order:</h2>
+        <p>Action-adventure</p>
+    </div>
+    <div class="card" data-name="Hitman 3">
+        <img src="/img/hitman 3.avif" alt="Hitman 3">
+        <h2>Hitman 3:</h2>
+        <p>Stealth</p>
+    </div>
+    <div class="card" data-name="FIFA 21">
+        <img src="/img/fifa21.jpg" alt="FIFA 21">
+        <h2>FIFA 21:</h2>
+        <p>Sports</p>
+    </div>
+    <div class="card" data-name="Madden NFL 21">
+        <img src="/img/madden-nfl-21-pc.jpg" alt="Madden NFL 21">
+        <h2>Madden NFL 21:</h2>
+        <p>Sports</p>
+    </div>
+    <div class="card" data-name="Super Mario Odyssey">
+        <img src="/img/Super-Mario-Odyssey.jpg" alt="Super Mario Odyssey">
+        <h2>Super Mario Odyssey:</h2>
+        <p>Platformer</p>
+    </div>
+    <div class="card" data-name="Animal Crossing: New Horizons">
+        <img src="/img/animal-crossing.webp" alt="Animal Crossing: New Horizons">
+        <h2>Animal Crossing: New Horizons:</h2>
+        <p>Life simulation</p>
+    </div>
+    <div class="card" data-name="Monster Hunter Rise">
+        <img src="/img/MonsterHunterRise.jpg" alt="Monster Hunter Rise">
+        <h2>Monster Hunter Rise:</h2>
+        <p>Action RPG</p>
+    </div>
+    <div class="card" data-name="Control: Ultimate Edition">
+        <img src="/img/control-ultimate.jpg" alt="Control: Ultimate Edition">
+        <h2>Control: Ultimate Edition:</h2>
+        <p>Action-Adventure</p>
+    </div>
+    <div class="card" data-name="Spelunky 2">
+        <img src="/img/spell funky.jpg" alt="Spelunky 2">
+        <h2>Spelunky 2:</h2>
+        <p>Roguelike Platformer</p>
+    </div>
+    <div class="card" data-name="The Outer Worlds">
+        <img src="/img/TheOuterWorlds.jpg" alt="The Outer Worlds">
+        <h2>The Outer Worlds:</h2>
+        <p>RPG</p>
+    </div>
+    <div class="card" data-name="Ghostrunner">
+        <img src="/img/ghost runner.avif" alt="Ghostrunner">
+        <h2>Ghostrunner:</h2>
+        <p>Action</p>
+    </div>
+    <div class="card" data-name="Dying Light 2">
+        <img src="/img/dyling light.avif" alt="Dying Light 2">
+        <h2>Dying Light 2:</h2>
+        <p>Action RPG</p>
+    </div>
+    <div class="card" data-name="Fallout 76">
+        <img src="/img/fallout-76.jpg" alt="Fallout 76">
+        <h2>Fallout 76:</h2>
+        <p>MMORPG</p>
+    </div>
+    <div class="card" data-name="No Man's Sky">
+        <img src="/img/no mans sky.avif" alt="No Man's Sky">
+        <h2>No Man's Sky:</h2>
+        <p>Space Exploration</p>
+    </div>
+    
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="JS/script.js"></script>
+   <!-- No results message (initially hidden) -->
+<h1 id="no-result-message" style="display:none;">No results found</h1>
+
+<!-- Footer Placeholder -->
+<div id="footer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Search Script -->
+<script>
+  // Function to filter games by name
+  function searchGames() {
+    // Get the search query from the input field and convert it to lowercase for case-insensitive comparison
+    let searchQuery = document.getElementById("name-search").value.toLowerCase();
+
+    // Get all the game cards
+    let gameCards = document.querySelectorAll(".card");
+    let foundResults = false;
+
+    // Loop through each game card
+    gameCards.forEach(card => {
+        // Get the game name from the 'data-name' attribute
+        let gameName = card.getAttribute("data-name").toLowerCase();
+
+        // If the game name includes the search query, display the card; otherwise, hide it
+        if (gameName.includes(searchQuery)) {
+            card.style.display = "block"; // Show the card
+            foundResults = true; // Mark as found
+        } else {
+            card.style.display = "none"; // Hide the card
+        }
+    });
+
+    // Show "No results found" message if no cards are displayed
+    const noResultMessage = document.getElementById("no-result-message");
+    if (!foundResults && searchQuery !== "") {
+        noResultMessage.style.display = "block";
+    } else {
+        noResultMessage.style.display = "none";
+    }
+  }
+
+  // Event listener for the search button
+  document.getElementById('search-button').addEventListener('click', searchGames);
+
+  // Optional: Event listener to trigger the search when the user presses "Enter" inside the input field
+  document.getElementById('name-search').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+      searchGames();
+    }
+  });
+
+</script>
+
+<script>
+  // Load the footer
+  fetch('../footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading the footer:', error));
+</script>
+
 </body>
 </html>

@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.faq {
+    width: 85%;
+    margin: 0 0 1em 6%;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    background: linear-gradient(8000deg, #620303 10%, rgb(41, 20, 20) 40%, #620303 70%);
+    border: 1px solid tomato;
+}
+
+/* Ensure the checkbox is hidden */
+.faq-toggle {
+    display: none;
+}
+
+/* Style the question */
+.faq h3 {
+    cursor: pointer;
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Initially hide the answer */
+.faq p {
+    display: none;
+    margin-top: 10px;
+    color: #ffffff;
+    /* Optional: lighter text color for answers */
+}
+
+.faq-toggle:checked+.faq-question+p {
+    display: block;
+}
+
+#main-content {
+    max-width: 95%;
+    margin: 5px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#input-search,
+textarea,
+button {
+    margin: 0 0 1em 6%;
+    padding: 10px 25px 10px 10px;
+    color: #000000;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    place-content: #000000;
+}
+
+::placeholder {
+    color: rgb(0, 0, 0);
+}
+
+button {
+    margin: 0;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#forms {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* Aligns items vertically */
+    gap: 10px;
+    /* Adds spacing between the input and button */
+}
+
+#search-bar {
+    width: 27%;
+    /* Adjust width to fill available space */
+    border-radius: 5%;
+}
+
+.btn-1 {
+    padding: 10px 20px;
+    background: linear-gradient(8000deg, #620303 10%, rgb(41, 20, 20) 40%, #620303 70%);
+    border-radius: 5%;
+    cursor: pointer;
+    margin-bottom: 1em;
+    font-weight: 600;
+}
+
+.btn-1:hover {
+    background: linear-gradient(8000deg, #c40808 10%, rgb(41, 20, 20) 40%, #aa1111 70%);
+}
+
+.faq-container h1 {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-top: 1%;
+    color: rgb(234, 0, 0);
+    font-family: 'Arial', sans-serif;
+    font-size: 100em;
+    animation: slideIn 2s ease-out;
+    background: linear-gradient(1deg, #620303, rgb(20, 40, 40), #0000);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    padding: 20px;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 400px !important;
+    height: 60px !important;
+    left: 37%;
+    border-radius: 300px;
+    border: 1px solid tomato;
+}
+
+/* Define the slideIn animation */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

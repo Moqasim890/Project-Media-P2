@@ -1,22 +1,19 @@
+/* Reset default styles */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* Body styling */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(
-        90deg, 
-        #220d0c, 
-        #000000 25%, 
-        #531000 50%, 
-        #000000 75%, 
-        #8b2902 100%
-    );
+    background: linear-gradient(90deg, #220d0c, #000000 25%, #531000 50%, #000000 75%, #8b2902 100%);
     color: #fff;
     line-height: 1.5;
 }
 
+/* Navbar styling */
 .navbar-black {
     background-color: black;
     color: white;
@@ -41,41 +38,184 @@ body {
     background-color: white; /* Ensures the toggler icon is visible */
 }
 
+/* Dropdown hover */
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    margin-top: 0; 
+}
+
+/* Logo styling (optional) */
+.navbar-logo-corner {
+    position: absolute;
+    top: 10px;
+    left: 22px;
+    z-index: 10;
+}
+
+.navbar-logo-corner img {
+    height: 40px;
+}
+
+/* Carousel styling */
+.carousel {
+    width: 90%; /* Full width for smaller screens */
+    margin: 0 auto;
+}
+
 .carousel-inner img {
     margin-top: 1%;
-    height: 90vh; /* Set a fixed height */
-    object-fit: cover; /* Keeps the aspect ratio while filling the height and width */
+    height: auto;
+    max-height: 90vh; /* Adjust height for smaller screens */
+    object-fit: cover;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #111;
-    font-size: 0.9rem;
-    color: #777;
-    width: 100%;
-    display: block;
-    margin-top: 7%;
+.carousel img {
+    width: 100%; /* Full width for all screen sizes */
+    max-height: 650px;
+    object-fit: cover;
 }
 
-.p-footer {
-    font-size: 1.5rem;
+/* Footer Styles */
+.footer {
+    background-color: #212529;
+    color: #fff;
+    padding-top: 50px;
+    padding-bottom: 30px;
 }
 
+.footer-heading {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #f8f9fa;
+    margin-bottom: 15px;
+}
+
+.footer-link {
+    color: #adb5bd;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #ff66cc;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.social-icon {
+    font-size: 1.8rem;
+    color: #adb5bd;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #ff66cc;
+}
+
+.social-icon:focus, .social-icon:active {
+    color: #f8f9fa;
+}
+
+form input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #6c757d;
+    background-color: #343a40;
+    color: white;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #ff66cc;
+    background-color: #495057;
+}
+
+form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ff66cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #d63384;
+}
+
+form button:focus {
+    outline: none;
+    background-color: #d63384;
+}
+
+/* Footer Bottom Section */
+footer p {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #6c757d;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ff66cc;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .footer {
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    .footer-heading {
+        font-size: 1.1rem;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+
+    form input {
+        width: 70%;
+    }
+
+    form button {
+        width: 30%;
+    }
+}
+
+
+/* Featured Games title */
 .featured {
     display: flex;
     justify-content: center;
     margin-top: 2%;
-    font-size: 300%;
+    font-size: 3rem;
     color: white;
 }
 
-/* Style for each game article */
+/* Article card styling */
 article {
     background: #111;
     border-radius: 8px;
     width: 100%;
-    height: auto; /* Use auto instead of percentage for better scaling */
+    height: auto;
     overflow: hidden;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -91,23 +231,11 @@ article:hover {
 
 article img {
     width: 100%;
-    height: 300px; /* Fix the height for uniform image scaling */
+    height: 300px;
     border-radius: 8px 8px 0 0;
     margin: 0;
 }
 
-@media screen and (max-width: 480px) {
-    .mailing-list footer {
-        background-color: rgba(0, 0, 0, 0.7);
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-        width: 300px;
-        text-align: start;
-    }
-}
-
-/* Text below the image */
 article p {
     margin: 15px 10px;
     font-size: 16px;
@@ -119,6 +247,7 @@ article p {
     text-align: center;
 }
 
+/* Container for game images */
 .container-img {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -128,6 +257,7 @@ article p {
     text-align: center;
 }
 
+/* Mailing list form styling */
 .mailing-list {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
@@ -171,104 +301,208 @@ article p {
 }
 
 .mailing-btn:hover {
-    background-color: #ff3333; /* Updated to a valid color */
+    background-color: #ff3333;
 }
+
+/* Keyframe animation for sliding in content */
 @keyframes slideIn {
     from {
-      transform: translateX(-100%);
-      opacity: 0;
+        transform: translateX(-100%);
+        opacity: 0;
     }
     to {
-      transform: translateX(0);
-      opacity: 1;
+        transform: translateX(0);
+        opacity: 1;
     }
-  }
-
-  .faq-item1{
-    color: #fff;
-position: relative;
-left: 37%;
-text-align: center;
-border: brown solid 1px;
-width: 400px !important;
-border-radius: 40px;
-background-color: #000000;
-margin-bottom: 20px;
-padding: 30px;
-bottom: -70px; 
-
-
-  }
-  .faq-item2{
-    color: #fff;
-position: relative;
-left: 37%;
-text-align: center;
-border: brown solid 1px;
-width: 400px !important;
-border-radius: 40px;
-background-color: #000000;
-margin-bottom: 20px;
-padding: 30px;
-bottom: -90px; 
-
-
-
-  }
-  .faq-item3{
-    color: #fff;
-position: relative;
-left: 37%;
-text-align: center;
-border: brown solid 1px;
-width: 400px !important;
-border-radius: 40px;
-background-color: #000000;
-margin-bottom: 20px;
-padding: 30px;
-bottom: -120px; 
-
-
-  }
-  .faq-item4{
-    color: #fff;
-position: relative;
-left: 37%;
-text-align: center;
-border: brown solid 1px;
-width: 400px !important;
-border-radius: 40px;
-background-color: #000000;
-margin-bottom: 300px;
-padding: 30px;
-bottom: -150px; 
-
-  }
-  .faq-container h1{
-    display: flex; 
-    position: relative;
-    justify-content: center;
-    margin-top: 1%;
-    color: rgb(234, 0, 0);
-    font-family: 'Arial', sans-serif;
-    font-size: 100em;
-    animation: slideIn 2s ease-out;
-    background: linear-gradient(8000deg, #000000, #8f0000);
-    color: rgb(255, 255, 255);
-    padding: 1em !important;
-    border-radius: 4px;
-    font-size: 1em;
-    width: 400px !important;
-    height: 60px !important;
-    text-align: center;
- margin-bottom: 30px;
-    
-
 }
-.faq-answer {
-    display: none; /* Hidden by default */
+
+/* Enhanced Animated Gradient Background for FAQ Section */
+.mainheader {
+
+    background-size: 600% 600%;
+    animation: gradientAnimation 8s ease infinite, shimmerEffect 5s ease-in-out infinite;
+    color: white;
+    padding: 5rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
   }
   
-  .faq-answer.open {
-    display: block; /* Visible when the 'open' class is added */
-  }  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Adding a shimmer effect on the text to make it glow */
+  @keyframes shimmerEffect {
+    0% {
+      text-shadow: 0 0 15px #ff66cc, 0 0 30px #ff66cc, 0 0 45px #ff66cc, 0 0 60px #ff66cc;
+    }
+    50% {
+      text-shadow: 0 0 25px #ffd700, 0 0 50px #ffd700, 0 0 75px #ffd700, 0 0 100px #ffd700;
+    }
+    100% {
+      text-shadow: 0 0 15px #ff66cc, 0 0 30px #ff66cc, 0 0 45px #ff66cc, 0 0 60px #ff66cc;
+    }
+  }
+  
+/* New game cards style */
+.card {
+    background-color: rgb(0, 0, 0) !important;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: aliceblue !important;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h2 {
+    margin: 16px 0;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.card p {
+    padding: 0 16px 16px;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* Hover effect for game cards */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-color: #0099ff;
+}
+
+/* Container for game cards */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    padding: 20px;
+}
+
+/* Mobile responsiveness for small devices */
+@media screen and (max-width: 480px) {
+    .mailing-list footer {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        width: 300px;
+        text-align: start;
+    }
+}
+
+/*Search bar games*/
+/* Search Container */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background-color: transparent;
+    border-radius: 50px;
+}
+
+/* Search Input */
+.search-container input {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #3b1e58; /* Darker purple border */
+    border-radius: 50px;
+    outline: none;
+    background: transparent;
+    color: white;
+    transition: all 0.3s ease;
+    width: 250px;
+    background-image: linear-gradient(45deg, #3b1e58, #4b2d6b, #6a2c8c, #4b2d6b); /* Darker gradient with lighter purple */
+    background-size: 400% 400%;
+    animation: gradientAnimation 3s ease infinite; /* Faster animation for stronger effect */
+}
+
+/* Focus Effect on Input */
+.search-container input:focus {
+    border-color: #9b59b6; /* Lighter purple for focus */
+    box-shadow: 0 0 10px rgba(155, 89, 182, 0.6); /* Intense light purple glow */
+}
+
+/* Search Button */
+.search-container button {
+    padding: 12px 20px;
+    background-color: #6a2c8c; /* Dark purple button */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+.search-container button:hover {
+    background-color: #9b59b6; /* Lighter purple on hover */
+    transform: scale(1.05); /* Slight button grow effect */
+}
+
+/* Animated Gradient */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .search-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .search-container input {
+        width: 100%;
+    }
+}
+
+.notfound {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    font-size: 1rem;
+    color: white;
+}
+
+.centernf {
+    display: flex;              /* Enable Flexbox */
+    justify-content: center;    /* Center horizontally */
+    align-items: center;        /* Center vertically */
+    position: fixed;            /* Fixed positioning to keep it in place */
+    top: 50%;                   /* 50% from the top of the viewport */
+    left: 50%;                  /* 50% from the left of the viewport */
+    transform: translate(-50%, -50%); /* Offset by 50% of the div's width/height */
+}
+
+

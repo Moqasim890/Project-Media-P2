@@ -1,14 +1,24 @@
+// Function to filter games by name
 function searchGames() {
-    const searchBar = document.getElementById("searchBar");
-    const searchQuery = searchBar.value.toLowerCase(); // Get the input and make it lowercase for case-insensitive comparison
-    const gameArticles = document.querySelectorAll(".game"); // Get all the game articles
+    // Get the search query from the input field and convert it to lowercase for case-insensitive comparison
+    let searchQuery = document.getElementById("name-search").value.toLowerCase();
 
-    gameArticles.forEach((game) => {
-        const gameDescription = game.querySelector("p").textContent.toLowerCase(); // Get the description text and make it lowercase
-        if (gameDescription.includes(searchQuery)) {
-            game.style.display = "block"; // Show the game if it matches the search
+    // Get all the game cards
+    let gameCards = document.querySelectorAll(".card");
+
+    // Loop through each game card
+    gameCards.forEach(card => {
+        // Get the game name from the 'data-name' attribute
+        let gameName = card.getAttribute("data-name").toLowerCase();
+
+        // If the game name includes the search query, display the card; otherwise, hide it
+        if (gameName.includes(searchQuery)) {
+            card.style.display = "block"; // Show the card
         } else {
-            game.style.display = "none"; // Hide the game if it doesn't match
+            card.style.display = "none"; // Hide the card
         }
     });
 }
+
+// Event listener for the search button
+document.getElementById('search-button').addEventListener('click', searchGames);

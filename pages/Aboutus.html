@@ -29,68 +29,102 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-black">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Home</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="../index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="games.html">Games</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Aboutus.html">About us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="FAQ.html">FAQ</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav ms-auto" class="navbarNav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
-          </li>
-          <li class="nav-item">
-            <span class="nav-link">|</span>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="">Register</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <h1>About us</h1>
-  <div class="container text-center  about col-6">
-    <div class="row align-items-start">
-      <div class="col-12">
-        <h1>team</h1>
-        <table>
+  <div id="navbar" class="sticky-top"></div> <!-- Placeholder for the navbar -->
 
-        </table>
-      </div>
+  <script>
+    // Use Fetch API to load the navbar HTML
+    fetch('../navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading the navbar:', error));
+  </script>
 
+
+  <section class="text-center py-5 mainheader">
+    <h1 class="display-4">Meet the team</h1>
+    <p class="lead">Get to meet the founders and talented developers1</p>
+  </section>
+
+  <!--Hernan 1-8-25-->
+  <div class="container mt-5">
+
+    <div class="row">
+      <!-- Team Member 1 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="/img/Hernan.png" class="card-img-top" alt="Hernan Martino">
+          <div class="card-body text-center">
+            <h5 class="card-title">Hernan Martino</h5>
+            <p class="card-text">Founder & Developer</p>
+          </div>
+        </div>
+      </div>
+      <!-- Team Member 2 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="/img/danny.jpg" class="card-img-top" alt="Danny E">
+          <div class="card-body text-center">
+            <h5 class="card-title">Danny E</h5>
+            <p class="card-text">Content Creator</p>
+          </div>
+        </div>
+      </div>
+      <!-- Team Member 3 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Mo">
+          <div class="card-body text-center">
+            <h5 class="card-title">Mo</h5>
+            <p class="card-text">Graphic Designer</p>
+          </div>
+        </div>
+      </div>
+      <!-- Team Member 4 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Fahim">
+          <div class="card-body text-center">
+            <h5 class="card-title">Fahim</h5>
+            <p class="card-text">Marketing Specialist</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
+  <!--Description-->
 
+  <section class="text-center py-5 mainheader col-8 offset-2">
+    <p class="lead">Welcome to TopGames</p>
+    <p class="lead">Your ultimate gaming destination founded by Hernan Martino, Danny Edelbroek, and Mo in December 2024. TopGames was created to provide a comprehensive, user-friendly platform for gamers around the world. Our mission is simple: to enhance your gaming experience with the best games, news, and community interaction.</p>
 
-  <footer>
-    <p>Project Media P2 © 2024</p>
-    <p>mbo utrecht team</p>
-  </footer>
+    <p class="lead">At TopGames, we offer a wide range of services tailored to every gamer, whether you’re looking for the latest releases, in-depth reviews, or tips on improving your gameplay. Our site is designed for easy navigation, ensuring that every gamer, from casual players to hardcore enthusiasts, can find what they need quickly and effortlessly.</p>
+
+    <p class="lead">What sets us apart is our focus on community. We believe gaming is better when shared, which is why we provide interactive forums, live streams, and social channels for gamers to connect. Whether you’re looking for advice, sharing experiences, or simply enjoying the latest gaming trends, TopGames is the place to be.</p>
+
+    <p class="lead">Our team is dedicated to providing top-notch customer service, expert recommendations, and valuable resources to help you optimize your gaming setup. With frequent updates and fresh content, we strive to make TopGames the best gaming site out there.</p>
+
+    <p class="lead">Join the TopGames community today and experience gaming like never before!</p>
+</section>
+
+  <!-- Footer Placeholder -->
+  <div id="footer"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+  <script>
+    // Load the footer
+    fetch('../footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading the footer:', error));
+  </script>
+
 </body>
 
 </html>

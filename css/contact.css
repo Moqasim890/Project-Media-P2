@@ -1,0 +1,75 @@
+.contactcontainer {
+    max-width: 750px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    /* Ensure consistent font styling */
+}
+
+.contactcontainer h1 {
+    text-align: center;
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.contactcontainer .form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactcontainer label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+.contactcontainer input,
+.contactcontainer textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.contactcontainer input:focus,
+.contactcontainer textarea:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+.contactcontainer button {
+    padding: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #a00101;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contactcontainer button:hover {
+    background-color: #d30000;
+}
+
+.contactcontainer .call-button {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #a00101;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.contactcontainer .call-button:hover {
+    background-color: #d30000;
+}
