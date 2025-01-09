@@ -18,7 +18,7 @@
     left: 37%;
     border-radius:300px;
 border: 1px solid tomato;
-
+text-decoration: none;
 
 }
 
@@ -32,7 +32,70 @@ border: 1px solid tomato;
       opacity: 1;
     }
   }
-
-
-    
    
+
+.container a{
+  text-decoration: none;
+ color: black;
+}
+
+
+/* From Uiverse.io by andrew-demchenk0 */
+.gamedownloadbutton {
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #17795E;
+  background-color: #209978;
+  overflow: hidden;
+}
+
+.gamedownloadbutton, .gamedownloadbutton__icon, .gamedownloadbutton__text {
+  transition: all 0.3s;
+}
+
+.gamedownloadbutton__text {
+  transform: translateX(22px);
+  color: #fff;
+  font-weight: 600;
+}
+
+.gamedownloadbutton__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: #17795E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gamedownloadbutton__svg {
+  width: 20px;
+  fill: #fff;
+}
+
+.gamedownloadbutton:hover {
+  background: #17795E;
+}
+
+.gamedownloadbutton:hover .gamedownloadbutton__text {
+  color: transparent;
+}
+
+.gamedownloadbutton:hover .gamedownloadbutton__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.gamedownloadbutton:active .gamedownloadbutton__icon {
+  background-color: #146c54;
+}
+
+.gamedownloadbutton:active {
+  border: 1px solid #146c54;
+}

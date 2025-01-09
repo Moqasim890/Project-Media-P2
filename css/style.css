@@ -316,6 +316,17 @@ article p {
     }
 }
 
+.no-results {
+
+    background-size: 600% 600%;
+    animation: gradientAnimation 8s ease infinite, shimmerEffect 5s ease-in-out infinite;
+    color: white;
+    padding: 5rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
 /* Enhanced Animated Gradient Background for FAQ Section */
 .mainheader {
 
@@ -388,6 +399,20 @@ article p {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     border-color: #0099ff;
 }
+
+.gamedownloadbutton {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s, bottom 0.3s;
+  }
+  
+  .card-container:hover .gamedownloadbutton {
+    opacity: 1;
+    bottom: -10px;
+  }
 
 /* Container for game cards */
 .container {
