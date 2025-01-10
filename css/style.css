@@ -408,11 +408,15 @@ article p {
     opacity: 0;
     transition: opacity 0.3s, bottom 0.3s;
   }
+  .card-container {
+    cursor: pointer;
+  }
   
   .card-container:hover .gamedownloadbutton {
     opacity: 1;
     bottom: -10px;
   }
+  
 
 /* Container for game cards */
 .container {

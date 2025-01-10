@@ -1,3 +1,14 @@
+
+ // Voeg een event listener toe aan de .card-container
+ document.querySelectorAll('.card-container').forEach(function(card) {
+    card.addEventListener('click', function() {
+        // Verkrijg de waarde van de data-href attribuut
+        var url = card.getAttribute('data-href');
+        // Stuur de gebruiker naar de URL
+        window.location.href = url;
+    });
+});
+
 let isPageLoaded = false;
 
 // Set a timeout for 3 seconds to check if the page hasn't loaded
