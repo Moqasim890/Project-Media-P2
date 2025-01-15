@@ -73,3 +73,19 @@
 .contactcontainer .call-button:hover {
     background-color: #d30000;
 }
+
+#error-container div {
+    background-color: #ffe6e6;
+    border: 1px solid #ff0000;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#succes-container div {
+    background-color: #e6ffe6;
+    border: 1px solid #0f8f20;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}

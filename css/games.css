@@ -1,4 +1,5 @@
 
+
 .h1center {
     display: flex; 
     position: relative;
@@ -34,7 +35,7 @@ text-decoration: none;
   }
    
 
-.container a{
+.container a:hover{
   text-decoration: none;
  color: black;
  cursor: pointer;
@@ -44,6 +45,7 @@ text-decoration: none;
 /* From Uiverse.io by andrew-demchenk0 */
 .gamedownloadbutton {
   position: relative;
+  display: none;
   width: 150px;
   height: 40px;
   cursor: pointer;
@@ -154,4 +156,9 @@ text-decoration: none;
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   border-color: #0099ff;
+}
+
+
+.hidden {
+  display: none;
 }

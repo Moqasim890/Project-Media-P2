@@ -1,7 +1,7 @@
 
- // Voeg een event listener toe aan de .card-container
- document.querySelectorAll('.card-container').forEach(function(card) {
-    card.addEventListener('click', function() {
+// Voeg een event listener toe aan de .card-container
+document.querySelectorAll('.card-container').forEach(function (card) {
+    card.addEventListener('click', function () {
         // Verkrijg de waarde van de data-href attribuut
         var url = card.getAttribute('data-href');
         // Stuur de gebruiker naar de URL
@@ -11,30 +11,27 @@
 
 let isPageLoaded = false;
 
-// Set a timeout for 3 seconds to check if the page hasn't loaded
-setTimeout(function () {
-    if (!isPageLoaded) {
-       
-        window.location.href = "404 page not found";
-    }
-}, 3000);
+// // Set a timeout for 3 seconds to check if the page hasn't loaded
+// setTimeout(function () {
+//     if (!isPageLoaded) {
 
-// If the page loads successfully, set the flag to true
-window.onload = function () {
-    isPageLoaded = true;
-    console.log('Page loaded successfully within 3 seconds.');
-};
+//         window.location.href = "404 page not found";
+//     }
+// }, 3000);
+
+// // If the page loads successfully, set the flag to true
+// window.onload = function () {
+//     isPageLoaded = true;
+//     console.log('Page loaded successfully within 3 seconds.');
+// };
 
 function sendMail() {
-    // Get form values
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const message = document.getElementById("message").value.trim();
 
-    // Simple email validation regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    // Check for empty fields and invalid email format
     if (!name) {
         alert("Name is required.");
         return;
@@ -52,26 +49,54 @@ function sendMail() {
         return;
     }
 
-    // Parameters for email
     let params = { name, email, message };
     const serviceID = "service_6pi95gx";
     const templateID = "template_ll7qt9d";
 
-    // Send email using emailjs
     emailjs.send(serviceID, templateID, params)
         .then(res => {
-            // Clear the form
             document.getElementById("name").value = "";
             document.getElementById("email").value = "";
             document.getElementById("message").value = "";
-            console.log(res);
-            alert("Your message was sent successfully.");
+
+            document.getElementById("succes-container").innerHTML = `
+                <div style="color: green; font-weight: bold; margin-top: 10px;">
+                    Your message was sent successfully.
+                </div>
+            `;
+
+            document.getElementById("error-container").innerHTML = ""; // Clear any error message
         })
         .catch(err => {
-            console.log(err);
-            alert("Failed to send the message. Please try again.");
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+
+            document.getElementById("error-container").innerHTML = `
+                <div style="color: red; font-weight: bold; margin-top: 10px;">
+                    Email is not available. Please try again later.
+                </div>
+            `;
+
+            document.getElementById("succes-container").innerHTML = ""; // Clear any success message
         });
 }
+
+const popupDownload = document.querySelectorAll(".popup-download");
+let htmlBlob = `
+    <a href="/account/login.html" class="gamedownloadbutton">
+        <span class="gamedownloadbutton__text">Download</span>
+        <span class="gamedownloadbutton__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" class="gamedownloadbutton__svg">
+                <path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path>
+                <path d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"></path>
+                <path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path>
+            </svg>
+        </span>
+    </a>
+`
+popupDownload.appendChild(htmlBlob);
+
 
 
 
@@ -100,7 +125,7 @@ const validQueries = [
         "vraag": "Which gaming console should I buy",
         "antwoord": "It depends on your preferences, budget, and desired exclusives. The PlayStation 5 and Xbox Series X/S are popular for high-quality games, while the Nintendo Switch is great for portability and exclusive Nintendo titles."
     },
-    {  
+    {
         "vraag": "How can I improve my gaming performance on a PC",
         "antwoord": "Lower the in-game graphics settings, ensure your GPU drivers are updated, close unnecessary background applications, and consider upgrading your hardware (e.g., add RAM or upgrade your GPU)."
     },
@@ -148,7 +173,7 @@ const validQueries = [
         "vraag": "How do I prevent excessive gaming",
         "antwoord": "Set time limits, encourage breaks, and promote a balanced schedule that includes other activities like sports and studying."
     }
-    
+
 ];
 
 const addContainer = document.querySelector(".add-container");
@@ -156,16 +181,16 @@ const addContainer = document.querySelector(".add-container");
 forms.addEventListener("submit", function (e) {
     e.preventDefault();
     const queryValue = forms.elements.query.value.toLowerCase(); // Convert to lowercase for case-insensitive matching
-    
+
     forms.elements.query.value = "";
 
 
     // Search for matching queries
-        // Search for matching queries
-        const results = validQueries.filter(obj => {
-            return obj.vraag.toLowerCase().includes(queryValue); // Match the query to the "vraag" field (case-insensitive)
-        });
-    
+    // Search for matching queries
+    const results = validQueries.filter(obj => {
+        return obj.vraag.toLowerCase().includes(queryValue); // Match the query to the "vraag" field (case-insensitive)
+    });
+
     // If results are found, show them in the add-container
     if (results.length > 0) {
         addContainer.innerHTML = ""; // Clear any previous results
@@ -183,7 +208,7 @@ forms.addEventListener("submit", function (e) {
             newP.textContent = result.antwoord;
 
             // Add an event listener to toggle the visibility of the <p> element
-            newH3.addEventListener("click", function() {
+            newH3.addEventListener("click", function () {
                 if (newP.style.display === "block") {
                     newP.style.display = "none"; // Hide answer if already shown
                 } else {
@@ -209,3 +234,5 @@ forms.addEventListener("submit", function (e) {
         window.location = "contact.html";
     }
 });
+
+

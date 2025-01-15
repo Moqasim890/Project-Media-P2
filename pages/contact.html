@@ -30,20 +30,25 @@
 
 
     <div class="contactcontainer">
-        <h1>Contact Us</h1>
+        <section id="messages-container">
+            <div id="error-container"></div>
+            <div id="succes-container"></div>
+        </section>
+        
         <div class="form">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Your Name" required>
-
+    
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="Your Email" required>
-
+    
             <label for="message">Message:</label>
             <textarea id="message" name="message" placeholder="Your Message" rows="3" required></textarea>
-
+    
             <button onclick="sendMail()">Send</button>
         </div>
     </div>
+    
 
     <div class="contactcontainer">
         <h1>Call Us</h1>
