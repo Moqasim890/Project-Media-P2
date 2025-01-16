@@ -95,10 +95,6 @@ let htmlBlob = `
         </span>
     </a>
 `
-popupDownload.appendChild(htmlBlob);
-
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const faqs = document.querySelectorAll('.faq h3');

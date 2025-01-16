@@ -1,7 +1,9 @@
+<?php session_start(); ?> <!-- Start session at the top -->
+
 <nav class="navbar navbar-expand-lg navbar-black sticky-top">
     <div class="container-fluid">
         <!-- Navbar Brand Links -->
-        <a class="navbar-brand" href="index (4).html">Home</a>
+        <a class="navbar-brand" href="index.html">Home</a>
 
         <!-- Logo (positioned top-right) -->
         <div class="navbar-logo-corner">
@@ -21,7 +23,6 @@
                     <a class="nav-link" href="/index.html">Home</a>
                 </li>
 
-
                 <li class="nav-item dropdown">
                     <a id="informatieknop" class="nav-link dropdown-toggle" href="/pages/games.html" role="button">
                         Games
@@ -35,7 +36,6 @@
                     </ul>
                 </li>
 
-
                 <li class="nav-item">
                     <a class="nav-link" href="/pages/Aboutus.html">About us</a>
                 </li>
@@ -47,17 +47,22 @@
                 </li>
             </ul>
 
-            <!-- Navbar right side (Login/Register) -->
+            <!-- Navbar right side (Login/Register/Logout) -->
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/account/login.html">Login</a>
-                </li>
-                <li class="nav-item">
-                    <span class="nav-link">|</span>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/account/register.html">Register</a>
-                </li>
+                <?php if (isset($_SESSION['user'])): ?>
+                    <!-- Show Logout when user is logged in -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/account/logout.php">Logout</a>
+                    </li>
+                <?php else: ?>
+                    <!-- Show Login and Register when user is not logged in -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/account/login.php">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/account/register.php">Register</a>
+                    </li>
+                <?php endif; ?>
             </ul>
         </div>
     </div>
