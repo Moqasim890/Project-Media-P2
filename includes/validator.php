@@ -27,7 +27,7 @@ class RegisterValidator {
         }
 
         if(!empty(get_user_username($this->pdo, $this->username))) {
-            $errors["username_exists"] = "Username already exists";
+            $errors["username_exists"] = "Account already exists";
         }
 
         if (!empty($errors)) {
@@ -67,11 +67,11 @@ class LoginValidator {
         $user = $this->get_user_data();
 
         if (!$user) {
-            $errors["invalid_username"] = "Invalid username entered";
+            $errors["invalid_username"] = "Username or password are incorrect";
         }
 
         if ($user && !password_verify($this->password, $user["pwd"])) {
-            $errors["invalid_password"] = "Invalid password entered";
+            $errors["invalid_password"] = "Username or password are incorrect";
         }
 
         if (!empty($errors)) {
