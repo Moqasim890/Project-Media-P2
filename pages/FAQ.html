@@ -16,12 +16,6 @@
 
   <!-- Navbar Section (Placeholder) -->
   <div id="navbar" class="sticky-top"></div>
-  <script>
-    fetch('../navbar.html')
-      .then(response => response.text())
-      .then(data => document.getElementById('navbar').innerHTML = data)
-      .catch(error => console.error('Error loading the navbar:', error));
-  </script>
 
   <!-- FAQ Header Section with Enhanced Animated Gradient -->
   <section class="text-center py-5 mainheader">
@@ -68,21 +62,21 @@
     </div>
   </main>
 
-
-  <!-- Footer Section (Placeholder) -->
   <div id="footer"></div>
+
   <script>
+    fetch('../navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading the navbar:', error));
+
     fetch('../footer.html')
       .then(response => response.text())
       .then(data => document.getElementById('footer').innerHTML = data)
       .catch(error => console.error('Error loading the footer:', error));
-  </script>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Search functionality script -->
-  <script>
     const searchInput = document.getElementById('search-bar');
     const faqItems = document.querySelectorAll('.accordion-item');
 
@@ -99,6 +93,7 @@
     });
   </script>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/JS/script.js"></script>
 
 </body>

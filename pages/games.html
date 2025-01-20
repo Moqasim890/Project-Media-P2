@@ -32,16 +32,6 @@
 
     <div id="navbar" class="sticky-top"></div> <!-- Placeholder for the navbar -->
 
-    <script>
-        // Use Fetch API to load the navbar HTML
-        fetch('../navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading the navbar:', error));
-    </script>
-
     <!-- asdad Header Section with Enhanced Animated Gradient -->
     <section class="text-center py-5 mainheader">
         <h1 class="display-4">All games</h1>
@@ -793,6 +783,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
+        fetch('../navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading the navbar:', error));
+
         // Load the footer
         fetch('../footer.html')
             .then(response => response.text())

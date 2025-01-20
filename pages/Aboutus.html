@@ -31,17 +31,6 @@
 
   <div id="navbar" class="sticky-top"></div> <!-- Placeholder for the navbar -->
 
-  <script>
-    // Use Fetch API to load the navbar HTML
-    fetch('../navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-      })
-      .catch(error => console.error('Error loading the navbar:', error));
-  </script>
-
-
   <section class="text-center py-5 mainheader">
     <h1 class="display-4">Meet the team</h1>
     <p class="lead">Get to meet the founders and talented developers1</p>
@@ -116,6 +105,12 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script>
+    fetch('../navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading the navbar:', error));
     // Load the footer
     fetch('../footer.html')
       .then(response => response.text())

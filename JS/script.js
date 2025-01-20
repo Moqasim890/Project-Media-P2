@@ -1,11 +1,9 @@
 
-// Voeg een event listener toe aan de .card-container
+
 document.querySelectorAll('.card-container').forEach(function (card) {
     card.addEventListener('click', function () {
-        // Verkrijg de waarde van de data-href attribuut
         var url = card.getAttribute('data-href');
-        // Stuur de gebruiker naar de URL
-        window.location.href = url;
+        window.location.href = url; 
     });
 });
 
@@ -65,7 +63,7 @@ function sendMail() {
                 </div>
             `;
 
-            document.getElementById("error-container").innerHTML = ""; // Clear any error message
+            document.getElementById("error-container").innerHTML = ""; 
         })
         .catch(err => {
             document.getElementById("name").value = "";
@@ -74,27 +72,27 @@ function sendMail() {
 
             document.getElementById("error-container").innerHTML = `
                 <div style="color: red; font-weight: bold; margin-top: 10px;">
-                    Email is not available. Please try again later.
+                    Server is temporaly not avaiable.
                 </div>
             `;
 
-            document.getElementById("succes-container").innerHTML = ""; // Clear any success message
+            document.getElementById("succes-container").innerHTML = ""; 
         });
 }
 
-const popupDownload = document.querySelectorAll(".popup-download");
-let htmlBlob = `
-    <a href="/account/login.html" class="gamedownloadbutton">
-        <span class="gamedownloadbutton__text">Download</span>
-        <span class="gamedownloadbutton__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" class="gamedownloadbutton__svg">
-                <path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path>
-                <path d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"></path>
-                <path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path>
-            </svg>
-        </span>
-    </a>
-`
+// const popupDownload = document.querySelectorAll(".popup-download");
+// let htmlBlob = `
+//     <a href="/account/login.html" class="gamedownloadbutton">
+//         <span class="gamedownloadbutton__text">Download</span>
+//         <span class="gamedownloadbutton__icon">
+//             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" class="gamedownloadbutton__svg">
+//                 <path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path>
+//                 <path d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"></path>
+//                 <path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path>
+//             </svg>
+//         </span>
+//     </a>
+// `
 
 document.addEventListener('DOMContentLoaded', () => {
     const faqs = document.querySelectorAll('.faq h3');
@@ -231,4 +229,9 @@ forms.addEventListener("submit", function (e) {
     }
 });
 
+   document.getElementById('mailing-form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevents the form from submitting the traditional way
+    alert('Thank you for joining our mailing list!');
+   
+  });
 
