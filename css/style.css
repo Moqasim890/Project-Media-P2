@@ -328,6 +328,10 @@ article p {
   }
 
 /* Enhanced Animated Gradient Background for FAQ Section */
+
+.leads {
+    animation: gradientAnimation 8s ease infinite, shimmerEffect 5s ease-in-out infinite;
+}
 .mainheader {
 
     background-size: 600% 600%;

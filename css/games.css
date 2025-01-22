@@ -41,6 +41,45 @@ text-decoration: none;
  cursor: pointer;
 }
 
+/*Comming soon*/
+
+/* Button Style - Red Theme */
+.commingsoon {
+  position: relative;
+  display: none; /* Set to 'flex' when visible */
+  width: 150px;
+  height: 40px;
+  cursor: not-allowed; /* Disabled cursor */
+  display: flex;
+  align-items: center;
+  border: 1px solid #b71c1c; /* Dark red border */
+  background-color: #f44336; /* Red background */
+  overflow: hidden;
+}
+
+.commingsoon, .commingsoon__icon, .commingsoon__text {
+  transition: all 0.3s;
+}
+
+.commingsoon__text {
+  transform: translateX(22px);
+  color: #fff; /* White text */
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+.commingsoon:active .commingsoon__icon {
+  background-color: #8b0000; /* Even darker red when active */
+}
+
+.commingsoon:active {
+  border: 1px solid #8b0000;
+}
 
 /* From Uiverse.io by andrew-demchenk0 */
 .gamedownloadbutton {
