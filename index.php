@@ -1,13 +1,5 @@
-<?php
-
-session_start();
-
-if (isset($_SESSION["user"])){
-  header("Location: ../index.html");
-  die();
-}
-
-
+<?php  
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +9,7 @@ if (isset($_SESSION["user"])){
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Register</title>
+    <title>Login</title>
     <link rel="stylesheet" href="/css/static.css">
     <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
@@ -36,9 +28,64 @@ if (isset($_SESSION["user"])){
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-  </head>
-  <body>
-    <div id="navbar" class="sticky-top"></div> <!-- Placeholder for the navbar -->
+</head>
+    
+  <nav class="navbar navbar-expand-lg navbar-black sticky-top">
+    <div class="container-fluid">
+        <!-- Navbar Brand Links -->
+        <a class="navbar-brand">Home</a>
+
+        <!-- Logo (positioned top-right) -->
+        <div class="navbar-logo-corner">
+            <img src="/img/logo.png" alt="Logo" height="40">
+        </div>
+
+        <!-- Navbar Toggler for smaller screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="">Home</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a id="informatieknop" class="nav-link " href="">
+                        Games
+                    </a>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">FAQ</a>
+                </li>
+            </ul>
+
+            <!-- Navbar right side (Login/Register/Logout) -->
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <div id="account-name"></div>
+              </li>
+                    <!-- Show Logout when user is logged in -->
+                    <!-- Show Login and Register when user is not logged in -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.php">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/account/register.php">Register</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</nav>
   
     <div class="center">
       
@@ -46,7 +93,7 @@ if (isset($_SESSION["user"])){
 
       <?php 
 
-      require_once '../includes/login-views.php';
+    require_once 'includes/login-views.php';
 
       render_message();
 
@@ -69,21 +116,11 @@ if (isset($_SESSION["user"])){
         <!-- <div class="pass">Forgot Password?</div> -->
         <input type="submit" value="Login">
         <div class="signup_link">
-          Not a member? <a href="register.php">Signup</a>
+          Not a member? <a href="/account/register.php">Signup</a>
           <!-- <p>Forgot your Password? <a href="{% url 'reset_password' %}">Reset Password</a></p>  -->
         </div>
       </form>
     </div>
-
-    <script>
-    // Use Fetch API to load the navbar HTML
-    fetch('../navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-      })
-      .catch(error => console.error('Error loading the navbar:', error));
-  </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>

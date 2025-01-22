@@ -9,19 +9,19 @@ document.querySelectorAll('.card-container').forEach(function (card) {
 
 let isPageLoaded = false;
 
-// // Set a timeout for 3 seconds to check if the page hasn't loaded
-// setTimeout(function () {
-//     if (!isPageLoaded) {
+// Set a timeout for 3 seconds to check if the page hasn't loaded
+setTimeout(function () {
+    if (!isPageLoaded) {
 
-//         window.location.href = "404 page not found";
-//     }
-// }, 3000);
+        window.location = "/notfound404.html";
+    }
+}, 3000);
 
-// // If the page loads successfully, set the flag to true
-// window.onload = function () {
-//     isPageLoaded = true;
-//     console.log('Page loaded successfully within 3 seconds.');
-// };
+// If the page loads successfully, set the flag to true
+window.onload = function () {
+    isPageLoaded = true;
+    console.log('Page loaded successfully within 3 seconds.');
+};
 
 function sendMail() {
     const name = document.getElementById("name").value.trim();

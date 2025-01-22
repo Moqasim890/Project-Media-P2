@@ -1,6 +1,8 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    ini_set('session.use_only_cookies', 1);
+    ini_set('session.use_strict_mode', 1);
 
     $username = $_POST["username"];
     $password = $_POST["password"];
@@ -19,13 +21,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $_SESSION["signup_success"] = "Signup successful. Proceed to login";
 
-        header("Location: /account/login.php");
+        header("Location: /index.php");
         die();
     } catch (PDOException $e) {
         die("SQL query failed: " . $e->getMessage());
     }
 
 } else {
-        header("Location: /account/register.php");
+        header("Location: ../account/register.php");
     die();
 }

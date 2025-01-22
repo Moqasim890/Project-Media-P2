@@ -57,7 +57,7 @@
               <h2>The Elder Scrolls V: Skyrim</h2>
               <p>RPG Open world</p>
             </div>
-            <a href="/account/login.html" class="gamedownloadbutton">
+            <a href="/download/downloadGame.zip" download class="gamedownloadbutton">
               <span class="gamedownloadbutton__text">Download</span>
               <span class="gamedownloadbutton__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" class="gamedownloadbutton__svg">
@@ -725,7 +725,7 @@
               <h2>Madden_NFL_21:</h2>
               <p>Sports</p>
           </div>
-          <a href="/account/login.html" class="gamedownloadbutton">
+          <a href="/download/downloadGame.zip" download class="gamedownloadbutton">
             <span class="gamedownloadbutton__text">Download</span>
             <span class="gamedownloadbutton__icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" class="gamedownloadbutton__svg">
@@ -797,6 +797,15 @@
                 document.getElementById('footer').innerHTML = data;
             })
             .catch(error => console.error('Error loading the footer:', error));
+
+            document.querySelectorAll('.card-container').forEach(container => {
+    container.addEventListener('click', function () {
+        const url = this.getAttribute('data-href');
+        if (url) {
+            window.location.href = url;
+        }
+    });
+});
     </script>
 
     <script src="/JS/script.js"></script>

@@ -331,7 +331,6 @@ article p {
 .mainheader {
 
     background-size: 600% 600%;
-    animation: gradientAnimation 8s ease infinite, shimmerEffect 5s ease-in-out infinite;
     color: white;
     padding: 5rem 0;
     text-align: center;

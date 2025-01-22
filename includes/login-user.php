@@ -2,6 +2,8 @@
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    ini_set('session.use_only_cookies', 1);
+    ini_set('session.use_strict_mode', 1);
 
     $username = $_POST["username"];
     $password = $_POST["password"];
@@ -21,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         setcookie("user", $user['username'], time() + (86400 * 30), "/");
 
         // Redirect naar index.html
-        header("Location: /index.html");
+        header("Location: /home.html");
         exit();
         
     } catch (PDOException $e) {
@@ -29,6 +31,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
 } else {
-    header("Location: ../account/login.php");
+    header("Location: /index.php");
     die();
 }

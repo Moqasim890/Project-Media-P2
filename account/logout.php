@@ -5,6 +5,6 @@ session_destroy();
 
 // Redirect to login page or homepage
 setcookie("user", "", time() - 3600, "/" );
-header("Location: /account/login.php");
+header("Location: /index.php");
 exit();
 

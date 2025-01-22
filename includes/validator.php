@@ -76,7 +76,7 @@ class LoginValidator {
 
         if (!empty($errors)) {
             $_SESSION["login_errors"] = $errors;
-            header("Location: ../account/login.php");
+            header("Location: /index.php");
             die();
         }
         

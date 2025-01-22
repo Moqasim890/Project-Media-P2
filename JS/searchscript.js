@@ -41,3 +41,5 @@ document.getElementById('name-search').addEventListener('keydown', function (eve
         searchGames();
     }
 });
+
+

@@ -1,12 +1,6 @@
 
-<?php
-  session_start();
-  
-  if (isset($_SESSION["user"])){
-    header(header: "Location: ../index.html");
-    die();
-  }
-  
+<?php 
+        session_start();
 ?>
 
 <!DOCTYPE html>
@@ -37,8 +31,62 @@
     <meta name="theme-color" content="#ffffff">
   </head>
   <body>
+  <nav class="navbar navbar-expand-lg navbar-black sticky-top">
+    <div class="container-fluid">
+        <!-- Navbar Brand Links -->
+        <a class="navbar-brand">Home</a>
 
-    <div id="navbar" class="sticky-top"></div> <!-- Placeholder for the navbar -->
+        <!-- Logo (positioned top-right) -->
+        <div class="navbar-logo-corner">
+            <img src="/img/logo.png" alt="Logo" height="40">
+        </div>
+
+        <!-- Navbar Toggler for smaller screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="">Home</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a id="informatieknop" class="nav-link " href="">
+                        Games
+                    </a>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">FAQ</a>
+                </li>
+            </ul>
+
+            <!-- Navbar right side (Login/Register/Logout) -->
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <div id="account-name"></div>
+              </li>
+                    <!-- Show Logout when user is logged in -->
+                    <!-- Show Login and Register when user is not logged in -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.php">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/account/register.php">Register</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</nav>
   
     <div class="center">
       <h1>Register</h1>
@@ -68,22 +116,10 @@
         <!-- <div class="pass">Forgot Password?</div> -->
         <input type="submit" value="Register">
         <div class="signup_link">
-          Already have an account? <a href="login.php">Login</a>
+          Already have an account? <a href="/index.php">Login</a>
         </div>
       </form>
     </div>
-
-    <div id="footer"></div>
-
-    <script>
-    // Use Fetch API to load the navbar HTML
-    fetch('../navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-      })
-      .catch(error => console.error('Error loading the navbar:', error));
-  </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
